@@ -1,0 +1,90 @@
+.nav-bg
+  width: 100%
+  background-color: $bg-logo-color
+
+.nav
+  display: flex
+  justify-content: space-between
+  &__logo
+    margin: 14px 0
+  &__list
+    display: flex
+    margin-left: auto
+    margin-right: 70px
+    margin-top: 42px
+    margin-bottom: 36px
+    &--item
+      padding-bottom: 10px
+      transition: border-bottom 300ms ease-in-out
+    &--item:not(:last-child)
+      margin-right: 85px
+    &--item:hover
+      border-bottom: 2px solid $orange
+      transition: border-bottom 300ms ease-in-out
+
+  &__search
+    width: 24px
+    height: 24px
+    margin-top: 40px
+    margin-bottom: 36px
+    background-image: url(../src/img/search.svg)
+  &__search:hover
+    background-image: url(../src/img/search-orange.svg)
+
+/* hamburger */
+.hamburger
+  width: 30px
+  height: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.hamburger__menu
+  display: none
+  position: relative
+  width: 30px
+  height: 5px
+  background-color: #000000
+
+.hamburger__menu::before
+  position: absolute
+  left: 0
+  top: -10px
+  content: ''
+  width: 30px
+  height: 5px
+  background-color: #000000
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+
+.hamburger__menu::after
+  position: absolute
+  left: 0
+  top: 10px
+  content: ''
+  width: 30px
+  height: 5px
+  background-color: #000000
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+
+.hamburger__menu.hamburger__menu-active
+  background-color: transparent
+
+.hamburger__menu.hamburger__menu-active::before
+  transform: rotate(45deg)
+  top: 0
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+
+.hamburger__menu.hamburger__menu-active::after
+  transform: rotate(-45deg)
+  top: 0
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+
+/* Media*/
+@media (max-width: 1024px)
+  .nav
+    display: flex
+    justify-content: start
+    &__logo
+      justify-content: center
+    &__list
+      display: none

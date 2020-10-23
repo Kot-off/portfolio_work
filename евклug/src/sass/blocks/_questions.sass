@@ -1,0 +1,51 @@
+.questions
+  display: flex
+  margin-top: 100px
+  margin-bottom: 100px
+
+/* accordion */
+.accordion
+  margin-top: 28px
+
+.tab input, .tab-content
+  display: none
+.tab
+  padding: 20px 0
+  border-bottom: 1px solid $hr
+  border-radius: 3px
+  margin-bottom: 10px
+.tab-title
+  display: flex
+  justify-content: space-between
+  font-size: 24px
+  line-height: 1
+  padding: 20px
+  font-weight: bold
+  text-transform: uppercase
+  cursor: pointer
+
+.tab-title::after
+  display: flex
+  justify-content: center
+  align-items: center
+  content: '+'
+  width: 50px
+  height: 50px
+  padding: 5px
+  margin-right: 0 auto
+  background-color: $circle-color
+  border-radius: 50%
+
+.tab-content
+  font-size: 20px
+  line-height: 2
+  padding: 10px 20px
+
+.tab :checked + .tab-title
+  border-radius: 3px 3px 0 0
+
+.tab :checked + .tab-title::after
+  content: '−'
+
+.tab :checked ~ .tab-content
+  display: block
