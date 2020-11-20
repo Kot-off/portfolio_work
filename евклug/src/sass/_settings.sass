@@ -29,6 +29,9 @@ ul
   padding: 0
   list-style: none
 
+ul li
+  +regular
+
 strong
   font-size: 24px
 
@@ -63,7 +66,8 @@ p
 .active
   color: $orange
 
-.hr
-  height: 1px
-  margin-top: 44px
-  color: $hr
+@media (max-width: 768px)
+  .container
+    width: 670px
+    padding: 0
+    margin: 0 50px

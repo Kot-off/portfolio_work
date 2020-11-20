@@ -1,0 +1,134 @@
+.footer
+  display: flex
+  justify-content: space-between
+  background: $black
+  color: $footer-text
+  padding-bottom: 50px
+
+  /* nav */
+  &__nav
+    flex: 1
+    display: flex
+    flex-direction: column
+    margin-top: 48px
+
+    &--logo img
+      width: 224px
+      height: 72px
+
+    &--list
+      line-height: 2
+      margin-top: 18px
+
+    &--social a:not(last-child)
+      margin-right: 24px
+
+    &--social :hover
+      filter: drop-shadow(0 0 6px rgb(252, 252, 252))
+    &--social
+      margin-top: auto
+    &--social a img
+      width: 60px
+      height: 60px
+
+  /* application */
+  &__application
+    flex: 1
+    margin-top: 56px
+    padding: 0
+
+    &--title
+      color: $footer-text
+      margin-bottom: 30px
+
+  /* text */
+  &__text
+    flex: 1
+    margin-top: 126px
+  &__text p
+    width: 50%
+    line-height: 2
+    margin-left: auto
+
+  &__link
+    color: $footer-text
+
+/* form / форма */
+.form
+  display: flex
+  flex-direction: column
+
+  &__input
+    height: 60px
+    margin-bottom: 25px
+    padding-left: 24px
+    padding-top: 14px
+    padding-bottom: 14px
+    color: $white
+    background: $input-bg
+
+input [type="text"],
+input [type="checkbox"]
+  color: $footer-text
+
+textarea
+  height: 150px
+  resize: none
+  padding-left: 24px
+  padding-top: 14px
+  padding-bottom: 14px
+  color: $white
+  background: $input-bg
+
+.send
+  display: flex
+  align-items: center
+  margin-top: 30px
+  &__btn
+    width: 268px
+    height: 60px
+    color: $white
+    background: $orange
+
+  &__checkbox
+    margin-right: 4px
+    margin-left: 22px
+
+@media (max-width: 1024px)
+  .footer
+    &__nav
+      margin-left: 0
+
+    &__text
+      display: none
+
+  .send p
+    width: 76%
+
+@media (max-width: 768px)
+  .footer
+    display: flex
+    flex-direction: column
+    padding: 0
+    &__nav
+      display: flex
+      flex-direction: column
+      margin-bottom: 60px
+      order: 2
+      &--logo
+
+      &--list
+        display: none
+      &--social
+        display: flex
+        margin-top: 16px
+      &--social a
+        display: block
+        width: 60px
+        height: 60px
+
+    &__application
+      display: flex
+      order: 1
+    &__text
+      display: none

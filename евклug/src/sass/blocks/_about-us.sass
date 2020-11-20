@@ -1,7 +1,7 @@
 .about-us
   display: flex
   flex-direction: column
-  margin-top: 100px
+  margin-top: 70px
   margin-bottom: 100px
 
   &__title
@@ -23,51 +23,50 @@
   flex: 1
   flex-direction: row
   width: 870px
-  //height: 620px 
   margin-right: 30px
   background: url(../src/img/about-us/about-bg.jpg)
   background-size: cover
   background-repeat: no-repeat
   background-position: center
 
-.about-us-block1__description
-  position: absolute
-  bottom: 0
-  display: flex
-  align-items: center
-  background: rgba(0, 0, 0, 0.5)
-
-  &--text
-    width: 50%
-    margin-top: 44px
-    margin-bottom: 42px
-    margin-left: 52px
-    font-size: 16px
-    line-height: 2
-    color: $white
-    +bold
-
-  &--btn
-    position: relative
+  &__description
+    position: absolute
+    bottom: 0
     display: flex
-    justify-content: center
     align-items: center
-    text-align: center
-    width: 175px
-    height: 60px
-    margin-left: 76px
-    color: $btn-text-color
-    border: 3px solid $orange
-    /* animation */
-    background-image: -webkit-linear-gradient(45deg, $orange 50%, transparent 50%)
-    background-image: linear-gradient(45deg, $orange 50%, transparent 50%)
-    background-position: 100%
-    background-size: 400%
-    -webkit-transition: background 500ms ease-in-out
-    transition: background 500ms ease-in-out
+    background: rgba(0, 0, 0, 0.5)
+
+    &--text
+      width: 50%
+      margin-top: 44px
+      margin-bottom: 42px
+      margin-left: 52px
+      font-size: 16px
+      line-height: 2
+      color: $white
     +bold
-  &--btn:hover
-    background-position: 0
+
+    &--btn
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      width: 175px
+      height: 60px
+      margin-left: 76px
+      color: $btn-text-color
+      border: 3px solid $orange
+      background-image: -webkit-linear-gradient(45deg, $orange 50%, transparent 50%)
+      background-image: linear-gradient(45deg, $orange 50%, transparent 50%)
+      background-position: 100%
+      background-size: 400%
+      -webkit-transition: background 500ms ease-in-out
+      transition: background 500ms ease-in-out
+      +bold
+
+    &--btn:hover
+      background-position: 0
 
 /* Block 2*/
 .about-us-block2
@@ -106,3 +105,32 @@
       font-size: 18px
       line-height: 1.4
       margin-left: 58px
+
+@media (max-width: 1024px)
+  .about-us
+    &__text
+      width: 91%
+      height: 100%
+      margin-bottom: 47px
+
+  .about-us-block
+    position: relative
+    display: flex
+    flex-direction: column
+
+  .about-us-block1
+    position: absolute
+    margin-top: 200px
+    width: 100%
+    height: 100%
+    margin: 0
+
+    &__description
+      width: 100%
+      height: 170px
+      &--text
+
+  .about-us-block2
+    margin-top: 40px
+    &__assets
+      margin-bottom: 20px

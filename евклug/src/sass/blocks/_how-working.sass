@@ -1,7 +1,7 @@
 .how-working
   display: flex
-  margin-top: 100px
-  margin-bottom: 100px
+  margin-top: 120px
+  margin-bottom: 140px
 
   &__title
 
@@ -51,3 +51,47 @@
   background-size: cover
   background-repeat: no-repeat
   background-position: center right
+
+@media (max-width: 1024px)
+  .how-working
+    display: flex
+    flex-direction: column
+
+  .how-working-block
+    display: flex
+    flex-direction: row
+
+  .how-working-block1
+    display: flex
+    flex-direction: column
+
+  .how-working-block2
+    display: flex
+    flex-direction: column
+
+@media (max-width: 768px)
+  .how-working
+    &__step
+      display: flex
+      order: 1
+
+  .how-working-block
+    display: flex
+    flex-direction: column
+    height: 100vh
+
+  .how-working-block1
+    display: flex
+    order: 3
+    margin-top: 38px
+    &__consultation
+      width: 100%
+
+  .how-working-block2
+    display: flex
+    margin: 0
+    height: 100vh
+    padding: 100px
+    background: url(../src/img/work/work-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center right

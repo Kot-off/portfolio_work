@@ -1,10 +1,12 @@
 .nav-bg
   width: 100%
   background-color: $bg-logo-color
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1)
 
 .nav
   display: flex
   justify-content: space-between
+  padding-bottom: 10px
   &__logo
     margin: 14px 0
   &__list
@@ -14,13 +16,15 @@
     margin-top: 42px
     margin-bottom: 36px
     &--item
-      padding-bottom: 10px
       transition: border-bottom 300ms ease-in-out
     &--item:not(:last-child)
       margin-right: 85px
     &--item:hover
+      display: flex
       border-bottom: 2px solid $orange
       transition: border-bottom 300ms ease-in-out
+    &--item a
+      display: flex
 
   &__search
     width: 24px
@@ -33,17 +37,17 @@
 
 /* hamburger */
 .hamburger
-  width: 30px
-  height: 30px
   display: flex
   justify-content: center
   align-items: center
+  width: 30px
+  height: 30px
 
 .hamburger__menu
   display: none
   position: relative
   width: 30px
-  height: 5px
+  height: 3px
   background-color: #000000
 
 .hamburger__menu::before
@@ -52,7 +56,7 @@
   top: -10px
   content: ''
   width: 30px
-  height: 5px
+  height: 3px
   background-color: #000000
   transition: transform 0.2s ease-in, top 0.2s linear 0.2s
 
@@ -62,7 +66,7 @@
   top: 10px
   content: ''
   width: 30px
-  height: 5px
+  height: 3px
   background-color: #000000
   transition: transform 0.2s ease-in, top 0.2s linear 0.2s
 
@@ -80,11 +84,27 @@
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s
 
 /* Media*/
+@media only screen and (min-width: 1920px)
+  .hamburger
+    display: none
+    &__menu
+      display: none
+
 @media (max-width: 1024px)
+  .container
+
   .nav
     display: flex
-    justify-content: start
+    justify-content: space-between
+    align-items: center
     &__logo
-      justify-content: center
+      order: 2
     &__list
       display: none
+    &__search
+      order: 3
+
+.hamburger
+  &__menu
+    display: flex
+    order: 1

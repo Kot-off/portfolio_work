@@ -1,9 +1,11 @@
-.headers
+.headers-bg
   display: flex
   flex-direction: column
   background: url(../src/img/header/header-slider1.jpg)
   background-repeat: no-repeat
   background-position: center
+
+.headers
 
   &__title
     width: 50%
@@ -30,3 +32,48 @@
     +bold
   &__btn:hover
     background: rgba(255, 153, 0, 0.6)
+
+/* Media*/
+@media (max-width: 1024px)
+  .headers-bg
+    background: none
+  .headers
+    display: flex
+    flex-direction: column
+    background: url(../src/img/1024px/header-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    &__title
+      width: 80%
+      margin-top: 60px
+    &__text
+      width: 80%
+      margin-top: 4px
+    &__btn
+      margin-top: 30px
+      margin-bottom: 100px
+
+@media (max-width: 768px)
+
+  .headers-bg
+    display: flex
+    flex-direction: column
+    background: url(../src/img/1024px/header-bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+
+  .headers
+    &__title
+      width: 100%
+      font-size: 54px
+      margin: 0
+      margin-top: 200px
+    &__text
+      width: 80%
+      font-size: 24px
+      margin: 0
+      margin-top: 18px
+    &__btn
+      margin: 0
+      margin-top: 110px
+      margin-bottom: 114px

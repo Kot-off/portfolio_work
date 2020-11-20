@@ -1,51 +1,52 @@
 .questions
   display: flex
   margin-top: 100px
-  margin-bottom: 100px
+  margin-bottom: 60px
+
+  &__title
+    margin-top: 55px
+    padding-bottom: 44px
+    border-bottom: 1px solid $hr
 
 /* accordion */
 .accordion
+  display: flex
+  //justify-content: center
+  align-items: center
   margin-top: 28px
+  &__list
+    width: 100%
 
-.tab input, .tab-content
-  display: none
-.tab
-  padding: 20px 0
-  border-bottom: 1px solid $hr
-  border-radius: 3px
-  margin-bottom: 10px
-.tab-title
+    &--item
+      display: flex
+      width: 100%
+      padding: 32px 0
+      font-size: 20px
+      line-height: 1.6
+      border-bottom: 1px solid $hr
+      +bold
+    &--item p
+      width: 80%
+
+.item-link
   display: flex
   justify-content: space-between
-  font-size: 24px
-  line-height: 1
-  padding: 20px
-  font-weight: bold
-  text-transform: uppercase
-  cursor: pointer
+  width: 100%
 
-.tab-title::after
+/* act */
+.accordion-act
   display: flex
   justify-content: center
   align-items: center
-  content: '+'
   width: 50px
   height: 50px
-  padding: 5px
-  margin-right: 0 auto
-  background-color: $circle-color
+  background: #ECECEC
   border-radius: 50%
 
-.tab-content
-  font-size: 20px
-  line-height: 2
-  padding: 10px 20px
-
-.tab :checked + .tab-title
-  border-radius: 3px 3px 0 0
-
-.tab :checked + .tab-title::after
-  content: '−'
-
-.tab :checked ~ .tab-content
-  display: block
+  &__plus
+    width: 30px
+    height: 30px
+  &__search
+    display: none
+    width: 30px
+    height: 30px
